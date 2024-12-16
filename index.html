@@ -6,41 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Освітній центр ENIGMA</title>
     <style>
+        /* Основні стилі */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #3b9fc1, #9d3bc1, #f6e04b);
-            color: #fff;
-            overflow-x: hidden;
+            color: #333;
+            background-color: #f4f9ff;
+            box-sizing: border-box;
         }
 
         header {
-            background: #281b63;
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 30px 20px;
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
-            color: #f6e04b;
         }
 
         header p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             margin: 10px 0 0;
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            background: #3b9fc1;
+            background-color: #005b99;
             padding: 10px 0;
+            text-align: center;
         }
 
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
@@ -48,7 +48,7 @@
         }
 
         nav a:hover {
-            color: #f6e04b;
+            color: #f0f8ff;
         }
 
         section {
@@ -56,162 +56,188 @@
             text-align: center;
         }
 
-        .advantages,
-        .reviews,
-        .teachers {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 30px;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 1200px;
-        }
-
-        .advantages h2,
-        .reviews h2,
-        .teachers h2 {
+        section h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            color: #007acc;
         }
 
-        .advantages p,
-        .reviews p,
-        .teachers p {
+        section p {
             font-size: 1.2em;
+            color: #555;
             line-height: 1.6;
         }
 
-        .grid-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            background: #4c3b7f;
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 300px;
+        /* Герой-секція */
+        .hero {
+            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             text-align: center;
-            transition: transform 0.3s;
         }
 
-        .card img {
-            width: 100%;
+        .hero h2 {
+            font-size: 3em;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .hero .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #005b99;
+        }
+
+        /* Форма */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
             border-radius: 10px;
-            height: 200px;
-            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .card h3 {
-            color: #f6e04b;
-            margin: 15px 0 10px;
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
         }
 
-        .card:hover {
-            transform: scale(1.05);
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-container button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #005b99;
         }
 
         footer {
-            background: #281b63;
-            padding: 20px;
+            background-color: #005b99;
+            color: white;
             text-align: center;
-            color: #fff;
-            font-size: 0.9em;
+            padding: 20px 0;
+            margin-top: 50px;
         }
 
         footer a {
-            color: #f6e04b;
+            color: white;
             text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <!-- Хедер -->
     <header>
         <h1>Освітній центр ENIGMA</h1>
-        <p>Досягайте мрій разом із нами!</p>
+        <p>Розвивайте свої навички та знання з нами!</p>
     </header>
 
+    <!-- Меню -->
     <nav>
-        <a href="#advantages">Наші переваги</a>
-        <a href="#teachers">Наші викладачі</a>
+        <a href="#about">Про нас</a>
         <a href="#courses">Курси</a>
-        <a href="#reviews">Відгуки</a>
+        <a href="#form">Запис на навчання</a>
         <a href="#contact">Контакти</a>
     </nav>
 
-    <section id="advantages">
-        <div class="advantages">
-            <h2>Чому обирають нас?</h2>
-            <p>Освітній центр ENIGMA пропонує якісні курси з різних дисциплін: програмування, математика, фізика, хімія,
-                історія, іноземні мови. Наші учні досягають успіху завдяки професійному підходу до навчання.</p>
+    <!-- Герой-секція -->
+    <section class="hero">
+        <h2>Ваша освіта починається тут</h2>
+        <p>Приєднуйтесь до нас і відкрийте нові горизонти у навчанні.</p>
+        <a href="#form" class="btn">Записатися зараз</a>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about">
+        <h2>Про нас</h2>
+        <p>ENIGMA — це освітній центр, який спеціалізується на викладанні математики, програмування, іноземних мов,
+            фізики, хімії та багатьох інших дисциплін. Наші досвідчені викладачі допоможуть вам досягти ваших цілей у
+            навчанні.</p>
+    </section>
+
+    <!-- Курси -->
+    <section id="courses">
+        <h2>Наші курси</h2>
+        <p>Обирайте з широкого спектру курсів: математика, програмування, англійська, німецька, фізика, хімія та багато
+            іншого.</p>
+    </section>
+
+    <!-- Форма запису -->
+    <section id="form">
+        <h2>Запис на навчання</h2>
+        <div class="form-container">
+            <form id="signup-form">
+                <label for="name">Ваше ім'я</label>
+                <input type="text" id="name" name="name" placeholder="Іван Іванов" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" required>
+
+                <label for="message">Ваше повідомлення</label>
+                <textarea id="message" name="message" rows="4"
+                    placeholder="Я хочу дізнатися більше про курс програмування"></textarea>
+
+                <button type="submit">Відправити заявку</button>
+            </form>
         </div>
     </section>
 
-    <section id="teachers">
-        <div class="teachers">
-            <h2>Наші викладачі</h2>
-            <div class="grid-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Викладач">
-                    <h3>Ольга Іванова</h3>
-                    <p>Викладач математики з 10-річним досвідом.</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Викладач">
-                    <h3>Іван Петров</h3>
-                    <p>Спеціаліст з програмування та штучного інтелекту.</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" alt="Викладач">
-                    <h3>Марія Коваленко</h3>
-                    <p>Викладач англійської та німецької мов.</p>
-                    </div>
-                    </div>
-                    </div>
-                    </section>
-                    
-                    <section id="courses">
-                        <div class="advantages">
-                            <h2>Наші курси</h2>
-                            <p>Математика, програмування, фізика, хімія, історія, англійська, німецька, французька, італійська та багато
-                                інших напрямків.</p>
-                        </div>
-                    </section>
-                    
-                    <section id="reviews">
-                        <div class="reviews">
-                            <h2>Відгуки</h2>
-                            <div class="grid-container">
-                                <div class="card">
-                                    <p>"Після курсів з програмування в ENIGMA я отримав свою першу роботу в IT! Дякую!"</p>
-                                    <h3>— Андрій</h3>
-                                </div>
-                                <div class="card">
-                                    <p>"Моя дитина покращила знання з математики і успішно склала ЗНО."</p>
-                                    <h3>— Світлана</h3>
-                                </div>
-                                <div class="card">
-                                    <p>"Курси з англійської допомогли мені вступити до університету за кордоном."</p>
-                                    <h3>— Оксана</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section id="contact">
-                        <div class="advantages">
-                            <h2>Контакти</h2>
-                            <p>Телефон: <a href="tel:+380678090817">067-809-0817</a></p>
-                            <p>Email: info@enigma.com</p>
-                        </div>
-                    </section>
-                    
-                    <footer>
-                        <p>&copy; 2024 Освітній центр ENIGMA. Всі права захищені.</p>
-                    </footer>
-                    </body>
-                    
-                    </html>
-                    
+    <!-- Контакти -->
+    <section id="contact">
+        <h2>Контакти</h2>
+        <p>Телефон: <a href="tel:+380678090817">067-809-0817</a></p>
+        <p>Email: info@enigma.com</p>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 Освітній центр ENIGMA. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        // JavaScript для обробки форми
+        document.getElementById("signup-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Дякуємо! Ваша заявка успішно відправлена. Ми зв’яжемося з вами найближчим часом.");
+        });
+    </script>
+</body>
+
+</html>
